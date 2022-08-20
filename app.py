@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Aug  4 02:06:13 2022
+Created on Mon Mar  21 02:06:13 2022
 
 @author: Bhargav
 """
@@ -10,8 +10,9 @@ Created on Thu Aug  4 02:06:13 2022
 import streamlit as st
 import pickle
 import string
-from nltk.corpus import stopwords
 import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 ps= PorterStemmer()
 
@@ -43,8 +44,8 @@ def text_transform(text):
 
 
 
-tfidf = pickle.load(open('D:/spamham/vectorizer.pkl','rb'))
-model  = pickle.load(open('D:/spamham/model.pkl','rb'))
+tfidf = pickle.load(open('D:/MLProjects/spamham/vectorizer.pkl','rb'))
+model  = pickle.load(open('D:/MLProjects/spamham/model.pkl','rb'))
 
 st.title('Text Spam / ham Classifier')
 
