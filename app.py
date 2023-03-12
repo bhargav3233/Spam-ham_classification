@@ -43,8 +43,8 @@ def text_transform(text):
 
 
 
-tfidf = pickle.load(open('D:/MLProjects/spamham/vectorizer.pkl','rb'))
-model  = pickle.load(open('D:/MLProjects/spamham/model.pkl','rb'))
+tfidf = pickle.load(open('vectorizer.pkl','rb'))
+model  = pickle.load(open('model.pkl','rb'))
 
 st.title('Text Spam / ham Classifier')
 
